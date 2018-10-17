@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Game of Life</title>
+    <meta name="description" content="Game of Life for 6.170">
+    <meta name="author" content="Yolanda Zhou" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href='css/style.css' rel='stylesheet' type='text/css'>
+
+  </head>
+  <body>
+    <h1 class="game-title">Game of Life</h1>
+
+    <div id="game-board"></div>
+
+    <div class="game-controls">
+      <span class="game-presets-container">
+        <select id="game-presets" name="presets" onchange="changePreset(this.value)">
+        </select>
+      </span>
+  
+      <button class="game-button" id="game-start" onclick="startGame()">start</button>
+      <button class="game-button hidden" id="game-stop" onclick="stopGame()">stop</button>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="js/board.js"></script>
+    <script src="js/game.js"></script>
+  </body>
+</html>
